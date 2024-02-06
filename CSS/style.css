@@ -1,0 +1,365 @@
+*,
+*::before,
+*::after {
+    /* 1: */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --bs-primary: #020230;
+    --bs-white: #fff;
+    --btn-color: #03a7d3;
+    --btn-color:#ff4646;
+}
+
+
+/*introductor-section*/
+#introductor-section {
+    background-color: var(--bs-primary);
+    height: 100vh;
+}
+
+@media screen and (max-width: 769px) {
+    #introductor-section {
+        height: 100vh;
+    }
+}
+
+#logo {
+    font-weight: 700;
+    color: #fff;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.nav-item .nav-link {
+    color: var(--bs-white);
+}
+
+.slider {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    font-size: 24px;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s, transform 1s;
+    transform: translateX(100%);
+}
+
+.content, .content-img {
+    width: 50%;
+}
+
+.content p {
+    font-size: 1rem;
+}
+
+.content-button {
+    display: inline-block;
+}
+.content-button .btn {
+    padding: 8px 70px;
+    color: white;
+}
+
+.content-button .btn:nth-child(1) {
+    border: 1px solid #03a7d3;
+    background-color: #03a7d3;
+    border-radius: 5px;
+    transition: all .5s;
+}
+
+.content-button .btn:nth-child(2) {
+    border: 1px solid #ff4646;
+    background-color: #ff4646;
+    border-radius: 5px;
+    transition: all .5s;
+}
+
+.content-button .btn:nth-child(1):hover {
+    border: 1px solid #03a7d3;
+    background-color: inherit;
+    color: #03a7d3;
+}
+.content-button .btn:nth-child(2):hover {
+    border: 1px solid #ff4646;
+    background-color: inherit;
+    color: #ff4646;
+}
+.content-img > img {
+    width: 100%;
+    height: 80vh;
+}
+
+.slide.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide.next {
+    transform: translateX(100%);
+}
+
+.slide.prev {
+    transform: translateX(-100%);
+}
+
+/*second-container*/
+.service-content-img {
+    width: 75px;
+    height: 75px;
+    background-color: #03a7d3;
+    border-radius: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 auto;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    padding: 10px;
+}
+
+.service-content-img:hover {
+    background-color: #ff4646;
+}
+
+.service-content-details {
+    margin-top: 5%;
+    text-align: center;
+}
+
+.service-content-details a {
+    color: #03a7d3;
+    text-decoration: none;
+}
+
+.service-content-details a:hover {
+    color: #ff4646;
+}
+
+/*third container*/
+.about-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.about-section .btn {
+    border: 1px solid #ff4646;
+    background-color: #ff4646;
+    border-radius: 5px;
+    transition: all .5s;
+    color: white;
+    padding: 8px 25px;
+}
+
+.about-section .btn:hover {
+    border: 1px solid #ff4646;
+    background-color: inherit;
+    color: #ff4646;
+}
+
+/*server-section*/
+
+#server-section  {
+    width: 100%;
+    height: 70vh;
+    color: #fff;
+}
+.server-row {
+    background: linear-gradient(110deg,transparent 25%,#020230 25%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 55px 0;
+}
+
+.server-img {
+    width: 75%;
+}
+
+.server-btn {
+    border: 1px solid #ff4646;
+    background-color: #ff4646;
+    border-radius: 5px;
+    transition: all .5s;
+    color: white;
+    padding: 8px 25px;
+}
+
+.server-btn:hover {
+    border: 1px solid #ff4646;
+    background-color: inherit;
+    color: #ff4646;
+}
+
+/*pricing section*/
+.price-section {
+    margin-top: 15%;
+}
+
+.price-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.price-detail {
+    border: 1px solid rgba(0, 0, 0, .3);
+    padding: 50px;
+    display: inline-block;
+}
+
+.price-detail > h5:nth-child(2) {
+    color: #03a7d3;
+}
+
+.price-button .btn {
+    border: 1px solid #ff4646;
+    background-color: #ff4646;
+    border-radius: 5px;
+    color: white;
+    padding: 8px 25px;
+}
+
+.price-button .btn:hover {
+    border: 1px solid #ff4646;
+    background-color: inherit;
+    color: #ff4646;
+}
+
+.price:hover .price-detail, .price:hover .price-button .btn {
+    background-color: #03a7d3;
+    color: white;
+    border: none;
+}
+
+.price-detail:hover, .price-detail:hover h5 {
+    background-color: #03a7d3;
+    color: white;
+}
+
+/*contact*/
+.contact {
+    margin-top: 10%;
+}
+
+.user-input {
+    display: grid;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (max-width:768px) {
+    .user-input {
+        width: 100%;
+    }
+}
+
+.user-input input {
+    margin-top: 5%;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, .3);
+}
+
+.user-input textarea {
+    margin-top: 5%;
+    border: 1px solid rgba(0, 0, 0, .3);
+}
+
+footer {
+    margin-top: 10%;
+    background-color: #020230;
+    color: white;
+    padding:40px;
+}
+
+.footer-group li {
+    background-color: inherit;
+    border: none;
+}
+
+.footer-group li a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    transition: all .5s;
+
+}
+.footer-group li a:hover {
+    color: #ff4646;
+}
+
+.social-media {
+    margin-top: 5%;
+}
+
+.social-media a {
+    color: white;
+    font-size: 1rem;
+    padding: 15px;
+    transition: all .5s;
+}
+
+.social-media a:hover {
+    color: #ff4646;
+}
+
+.subscribe input  {
+    border: none;
+    background-color: inherit;
+    color: white;
+    outline: none;
+    border-bottom: 1px solid var(--bs-white);
+    margin-top: 5%;
+}
+
+.subscribe .btn {
+    margin-top: 5%;
+    border: 1px solid #ff4646;
+    background-color: #ff4646;
+    border-radius: 5px;
+    color: white;
+    width: 50%;
+    transition: all .5s;
+    overflow: hidden;
+
+}
+
+.subscribe .btn:hover {
+    border: 1px solid #ff4646;
+    background-color: inherit;
+    color: #ff4646;
+}
+
+.rights-notice {
+    border-top: 1px solid white;
+}
