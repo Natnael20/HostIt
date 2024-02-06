@@ -293,6 +293,15 @@ body, html {
 .user-input textarea {
     margin-top: 5%;
     border: 1px solid rgba(0, 0, 0, .3);
+    position: relative;
+    overflow: hidden;
+}
+
+textarea::placeholder {
+    position: absolute;
+    top:40%;
+    left: 2%;
+    
 }
 
 footer {
@@ -362,4 +371,18 @@ footer {
 
 .rights-notice {
     border-top: 1px solid white;
+}
+
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(100px);
+    transition: all 1.5s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
 }
